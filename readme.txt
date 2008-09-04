@@ -14,7 +14,7 @@ The Wordpress Plugin 2D Barcodes creates automatically a 2D-Barcode to every pos
 It will use the TagSOLUTE (http://www.tagsolute.de) API to create the 2D Barcodes.
 All you need is a DevKey or an API Key which can be created at http://www.tagsolute.de/profil
 
-No it is very easy to see you are your Wordpress Blog on a mobile device. Just scan the code, an view the post on your mobile device.
+No it is very easy to see your Wordpress Blog on a mobile device. Just scan the code with your mobile phone, an view the post on your mobile device.
 In each post you can set a <!--no2dbarcode--> Code and the 2D Barcode picture will not be displayed in this post.
 Have fun!
 
