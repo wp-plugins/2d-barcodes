@@ -14,10 +14,39 @@ function barcode_config_page() {
 	if ( function_exists('add_submenu_page') )
 		add_submenu_page('plugins.php', __('2DBarcodes'), __('2DBarcodes'), 'manage_options',  __FILE__, 'barcodes_options_subpanel');
 
-
-
-
 }
+
+###pda detection;
+### thanks 
+function getBrowserAgentsToDetect(){
+	$defaultUserAgents = "Elaine/3.0, iPhone, iPod, Palm, EudoraWeb, Blazer, AvantGo, Windows CE, Cellphone, Small, MMEF20, Danger, hiptop, Proxinet, ProxiNet, Newt, PalmOS, NetFront, SHARP-TQ-GX10, SonyEricsson, SymbianOS, UP.Browser, UP.Link, TS21i-10, MOT-V, portalmmm, DoCoMo, Opera Mini, Palm, Handspring, Nokia, Kyocera, Samsung, Motorola, Mot, Smartphone, Blackberry, WAP, SonyEricsson, PlayStation Portable, LG, MMP,OPWV, Symbian, EPOC";
+	
+	$browserAgents = $defaultUserAgents;
+	    if(!empty($browserAgents)){
+	        $browserAgents = explode(',',$browserAgents);
+	        if(!empty($browserAgents)){
+	           foreach ($browserAgents as $key => $value){
+	               $browserAgents[$key] = trim($value);
+	           }
+	           return $browserAgents;
+	        }
+	    }
+	    return array();
+	}
+	
+	function detectPDA(){
+		$browserAgent = $_SERVER['HTTP_USER_AGENT'];
+		
+		$userAgents = getBrowserAgentsToDetect();
+		foreach ( $userAgents as $userAgent ) {
+		if(eregi($userAgent,$browserAgent)){
+			    return true;
+		}
+		}
+		return false;
+	}	
+	
+
 
 
 function barcodes_add_options() {
@@ -176,6 +205,7 @@ function barcodes_genadcode(){
 
 define("TAGSOLUTE_DEV_KEY",  $devkey);
 define("TAGSOLUTE_API_URL", "http://www.tagsolute.de/cgi-bin/api.cgi");
+require_once("json/JSON.php");
 require_once("api.php");
 
 $mParams = array("sUrl" => get_permalink());
@@ -216,7 +246,7 @@ global $doing_rss;
   if(is_feed() || $doing_rss)
     return $content;
   if(strpos($content, "<!--no2dbarcode-->") !== false) return $content;
-
+  if( detectPDA()== true) return $content;	
   if(is_home() && get_option('barcodes_home') == "checked=on") return $content;
   if(is_page() && get_option('barcodes_page') == "checked=on") return $content;
   if(is_single() && get_option('barcodes_post') == "checked=on") return $content;
