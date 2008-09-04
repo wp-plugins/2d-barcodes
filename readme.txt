@@ -3,16 +3,17 @@ Contributors: Christian Doerfel
 Tags: tags, images, post
 Requires at least: 1.5.2
 Tested up to: 2.6.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
+== Description ==
 The Wordpress Plugin 2D Barcodes creates automatically a 2D-Barcode to every post you have produced.
 It will use the TagSOLUTE (http://www.tagsolute.de) API to create the 2D Barcodes.
 All you need is a DevKey or an API Key which can be created at http://www.tagsolute.de/profil
 
-== Description ==
-No it is very easy to see you’re your Wordpress Blog on a mobile device. Just scan the code, an view the post on your mobile device.
-In the each post you can set a <!--no2dbarcode--> Code and the 2D Barcode picture will not be displayed in this post.
-Have fun
+
+No it is very easy to see you are your Wordpress Blog on a mobile device. Just scan the code, an view the post on your mobile device.
+In each post you can set a <!--no2dbarcode--> Code and the 2D Barcode picture will not be displayed in this post.
+Have fun!
 
 
 == Installation ==
