@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: 2D Barcodes
-Plugin URI: http://www.tagsolute.de/plugins
+Plugin URI: http://www.tagsolute.de/developer/wordpress-plugin.html
 Description: Inserts a 2D Barcode
-Version: 1.0
+Version: 1.0.1
 Author: Christian Doerfel
 Author URI: http://www.tagsolute.de
 */
