@@ -34,3 +34,7 @@ If you have already installed the plugin
 == Frequently Asked Questions ==
 
 No Questions yet ;-) 
+
+== Screenshots ==
+1. Administration Interface
+
