@@ -34,9 +34,6 @@ If you have already installed the plugin
 2. Delete the old `barcodes` directory in `/wp-content/plugins/`
 2. Make a fresh install as above described
 
-== Frequently Asked Questions ==
-
-No Questions yet ;-) 
 
 == Screenshots ==
 1. Administration Interface
