@@ -18,6 +18,7 @@ Now it is very easy to see your Wordpress Blog on a mobile device. Just scan the
 In each post you can set a <!--no2dbarcode--> Code and the 2D Barcode picture will not be displayed in this post.
 Have fun!
 
+If you need a mobil Plugin for Wordpress we suggest the plugin "Wordpress PDA & iPhone". http://wordpress.org/extend/plugins/wp-pda/
 
 == Installation ==
 
