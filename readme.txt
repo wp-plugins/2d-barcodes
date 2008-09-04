@@ -1,4 +1,4 @@
-=== Wordpress Automatic upgrade ===
+=== 2D Barcodes ===
 Contributors: Christian Doerfel
 Tags: tags, images, post
 Requires at least: 1.5.2
